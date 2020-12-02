@@ -4,6 +4,7 @@
 #include "ErrorCode.h"
 #include "Ball.h"
 #include "Parallelepiped.h"
+#include "ReaderCube.h"
 #include <sstream>
 
 ReaderBallOrPaeallepiped::ReaderBallOrPaeallepiped(std::string str)
@@ -25,7 +26,7 @@ Figures* ReaderBallOrPaeallepiped::get()
 			object = new Ball;
 			object->setData(stream);
 			return object;
-			
+
 		}
 
 
@@ -34,16 +35,34 @@ Figures* ReaderBallOrPaeallepiped::get()
 			object = new Parallelepiped;
 			object->setData(stream);
 			return object;
-			
+
 		}
 
 	}
 	catch (const ErrorCode error)
 	{
-		throw error;
+		if (error.code == 1) {
+
+			ReaderCube reder(teamp);
+			try
+			{
+				return reder.get();
+
+			}
+			catch (const ErrorCode error)
+			{
+				throw error;
+
+			}
+
+
+		}
+		else {
+			throw error;
+		}
 
 	}
-	
 
-	
+
+
 }

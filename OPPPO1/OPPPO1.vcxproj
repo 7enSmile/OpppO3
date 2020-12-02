@@ -142,25 +142,35 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="CheckCube.cpp" />
     <ClCompile Include="CheckFigure.cpp" />
+    <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Figures.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Parallelepiped.cpp" />
     <ClCompile Include="ReaderBallOrPaeallepiped.cpp" />
+    <ClCompile Include="ReaderCube.cpp" />
     <ClCompile Include="readOwner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
+    <ClInclude Include="CheckCube.h" />
     <ClInclude Include="CheckFigure.h" />
+    <ClInclude Include="Cube.h" />
     <ClInclude Include="ErrorCode.h" />
     <ClInclude Include="Figures.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Parallelepiped.h" />
     <ClInclude Include="ReaderBallOrPaeallepiped.h" />
+    <ClInclude Include="ReaderCube.h" />
     <ClInclude Include="readOwner.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OPPPO11.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
