@@ -5,6 +5,6 @@
 {
 	 int code;
 	 std::string about;
-	
+	 std::string str;
 
 };

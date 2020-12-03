@@ -3,7 +3,7 @@
 Cube::~Cube() {
 
 }
-void Cube::setData(std::stringstream& stream) {
+Cube::Cube(std::stringstream& stream) {
 	float density;
 	int weight;
 	stream >> rib;

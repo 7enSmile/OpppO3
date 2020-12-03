@@ -36,7 +36,7 @@ bool isCube(std::string& figure)
 		throw error;
 	}
 	
-
+	stream.get();
 	if (stream.eof()) {
 		return 1;
 	}
@@ -44,6 +44,13 @@ bool isCube(std::string& figure)
 		ErrorCode error;
 		error.about = "ToMatchArg";
 		error.code = 2;
+		std::string teamp;
+		while (!stream.eof()) {
+			stream>>teamp;
+			error.str += teamp+" ";
+
+
+		}
 		throw error;
 
 	}

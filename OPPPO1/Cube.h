@@ -7,9 +7,10 @@ class Cube : public Figures
 {
 public:
 	int rib;
+	Cube(std::stringstream& stream);
 private:
 	~Cube();
-	void setData(std::stringstream& stream);
+	
 	void getData();
 	std::string getClass();
 };

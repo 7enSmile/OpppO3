@@ -7,7 +7,6 @@ private:
 	std::string name;
 public:
 	virtual ~Figures();
-	virtual void setData(std::stringstream&) = 0;
 	virtual void getData() = 0;
 	virtual std::string getClass() = 0;
 	

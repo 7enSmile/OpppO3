@@ -7,7 +7,7 @@ private:
 	int radius;
 public:
 	~Ball();
-	void setData(std::stringstream& stream);
+	Ball(std::stringstream& stream);
 	void getData();
 	std::string getClass();
 

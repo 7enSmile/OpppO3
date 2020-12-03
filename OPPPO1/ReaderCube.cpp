@@ -18,14 +18,15 @@ Figures* ReaderCube::get()
 		std::string figure;
 		std::stringstream stream(teamp);
 		stream >> type;
-		Figures *object = new Cube;
-		object->setData(stream);
+		Figures *object = new Cube(stream);
 		return object;
 
 	}
 	catch (const ErrorCode error)
 	{
+		
 		throw error;
+
 
 	}
 }

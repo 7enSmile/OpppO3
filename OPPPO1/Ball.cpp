@@ -5,20 +5,20 @@
 Ball::~Ball() {
 
 }
-void Ball::setData(std::stringstream& stream) {
+Ball::Ball(std::stringstream& stream) {
 	float density;
 	int weight;
 	stream >> radius;
 	stream >> density;
 	Figures::setDensity(density);
 	std::string name = readOwner(stream);
-	if (name[0] == '\"'){
+	if (name[0] == '\"') {
 		name.erase(0, 1);
-		name.erase(name.size()-1, name.size() - 1);
+		name.erase(name.size() - 1, name.size() - 1);
 	}
 
 	Figures::setName(name);
-	
+
 
 
 

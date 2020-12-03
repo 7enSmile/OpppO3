@@ -186,6 +186,13 @@ bool isParallelepiped(std::string& figure) {
 		ErrorCode error;
 		error.about = "ToMatchArg";
 		error.code = 2;
+		std::string teamp;
+		while (!stream.eof()) {
+			stream >> teamp;
+			error.str += teamp + " ";
+
+
+		}
 		throw error;
 	}
 		

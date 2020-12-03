@@ -23,8 +23,8 @@ Figures* ReaderBallOrPaeallepiped::get()
 		std::stringstream stream(teamp);
 		stream >> type;
 		if (type == "ball") {
-			object = new Ball;
-			object->setData(stream);
+			object = new Ball(stream);
+			
 			return object;
 
 		}
@@ -32,8 +32,8 @@ Figures* ReaderBallOrPaeallepiped::get()
 
 		if (type == "parallelepiped") {
 
-			object = new Parallelepiped;
-			object->setData(stream);
+			object = new Parallelepiped(stream);
+			
 			return object;
 
 		}

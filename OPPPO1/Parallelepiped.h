@@ -5,9 +5,9 @@ class Parallelepiped : public Figures
 {
 private:
 	int* rib = new int[3];
-private:
+public:
 	~Parallelepiped()override;
-	void setData(std::stringstream& stream);
+	Parallelepiped(std::stringstream& stream);
 	void getData();
 	std::string getClass();
 };
