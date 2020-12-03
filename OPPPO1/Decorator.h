@@ -7,5 +7,6 @@ private:
 public:
 	Decorator(Figures* f);
 	void getData(std::ostream&);
+	std::string getClass();
 };
 

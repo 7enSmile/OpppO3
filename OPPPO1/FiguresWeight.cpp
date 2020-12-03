@@ -11,3 +11,8 @@ void FiguresWeight::getData(std::ostream& os)
 	os << " weight:" << weight;
 }
 
+std::string FiguresWeight::getCalss()
+{
+	return Decorator::getClass();
+}
+

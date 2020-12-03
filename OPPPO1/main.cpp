@@ -4,6 +4,7 @@
 #include "List.h"
 #include "ErrorCode.h"
 #include "ReaderBallOrPaeallepiped.h"
+#include "Ball.h"
 
 
 
@@ -22,7 +23,7 @@ int main(int argc, char** argv) {
 		try
 		{
 			Figures* obj = reader.get();
-			std::cout<<obj;
+			std::cout << obj->getClass();
 
 		}
 		catch (const ErrorCode)
