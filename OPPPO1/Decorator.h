@@ -6,6 +6,6 @@ private:
 	Figures* figure;
 public:
 	Decorator(Figures* f);
-	void getData();
+	void getData(std::ostream&);
 };
 

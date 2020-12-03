@@ -19,8 +19,8 @@ Cube::Cube(std::stringstream& stream) {
 	Figures::setName(name);
 
 }
-void Cube::getData() {
-	std::cout << std::endl<<"figure:cube " << "rib:" << rib;
+void Cube::getData(std::ostream& os) {
+	os << std::endl<<"figure:cube " << "rib:" << rib;
 	Figures::getDataFigure();
 }
 std::string Cube::getClass() {

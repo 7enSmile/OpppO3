@@ -5,9 +5,9 @@ FiguresWeight::FiguresWeight(Figures* figure, int teamp):Decorator(figure)
 	weight = teamp;
 }
 
-void FiguresWeight::getData()
+void FiguresWeight::getData(std::ostream& os)
 {
-	Decorator::getData();
-	std::cout << " weight:" << weight;
+	Decorator::getData(os);
+	os << " weight:" << weight;
 }
 

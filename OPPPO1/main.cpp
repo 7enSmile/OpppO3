@@ -1,5 +1,6 @@
 ﻿#include <fstream>
 #include <sstream>
+#include <iostream>
 #include "List.h"
 #include "ErrorCode.h"
 #include "ReaderBallOrPaeallepiped.h"
@@ -21,7 +22,7 @@ int main(int argc, char** argv) {
 		try
 		{
 			Figures* obj = reader.get();
-			obj->getData();
+			std::cout<<obj;
 
 		}
 		catch (const ErrorCode)

@@ -1,5 +1,6 @@
 #pragma once
 #include "string"
+#include <ostream>
 
 class Figures {
 private:
@@ -7,8 +8,8 @@ private:
 	std::string name;
 public:
 	virtual ~Figures();
-	virtual void getData() = 0;
-
+	virtual void getData(std::ostream&) = 0;
+	friend std::ostream& operator<<(std::ostream& os, Figures* figure);
 	
 	void setName(std::string& teampName);
 	void setDensity(float teampDensity);

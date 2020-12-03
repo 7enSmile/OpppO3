@@ -7,7 +7,7 @@ Decorator::Decorator(Figures* f)
     }
 }
 
-void Decorator::getData()
+void Decorator::getData(std::ostream& os)
 {
-    figure->getData();
+    figure->getData(os);
 }

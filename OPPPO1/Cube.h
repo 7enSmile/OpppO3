@@ -11,6 +11,6 @@ public:
 private:
 	~Cube();
 	
-	void getData();
+	void getData(std::ostream&);
 	std::string getClass();
 };

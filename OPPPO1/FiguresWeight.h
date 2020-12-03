@@ -7,7 +7,7 @@ private:
 	int weight;
 public:
 	FiguresWeight(Figures* figure, int teamp);
-	void getData();
+	void getData(std::ostream&);
 	
 };
 
