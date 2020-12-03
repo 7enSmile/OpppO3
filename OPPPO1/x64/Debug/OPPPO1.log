@@ -1,7 +1,2 @@
-﻿  Parallelepiped.cpp
-D:\prodjects\OpppO3\OPPPO1\Parallelepiped.cpp(38,6): warning C4101: weight: неиспользованная локальная переменная
-  ReaderBallOrPaeallepiped.cpp
-  ReaderCube.cpp
-  Создание кода...
-D:\prodjects\OpppO3\OPPPO1\ReaderBallOrPaeallepiped.cpp(68): warning C4715: ReaderBallOrPaeallepiped::get: значение возвращается не при всех путях выполнения
+﻿  ReaderCube.cpp
   OPPPO1.vcxproj -> D:\prodjects\OpppO3\x64\Debug\OPPPO1.exe

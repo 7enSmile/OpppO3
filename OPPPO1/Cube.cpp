@@ -20,7 +20,7 @@ Cube::Cube(std::stringstream& stream) {
 
 }
 void Cube::getData() {
-	std::cout << "figure:cube " << "rib:" << rib;
+	std::cout << std::endl<<"figure:cube " << "rib:" << rib;
 	Figures::getDataFigure();
 }
 std::string Cube::getClass() {

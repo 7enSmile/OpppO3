@@ -8,7 +8,7 @@ private:
 public:
 	virtual ~Figures();
 	virtual void getData() = 0;
-	virtual std::string getClass() = 0;
+
 	
 	void setName(std::string& teampName);
 	void setDensity(float teampDensity);

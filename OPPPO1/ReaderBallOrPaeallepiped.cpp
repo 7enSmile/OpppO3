@@ -6,7 +6,7 @@
 #include "Parallelepiped.h"
 #include "ReaderCube.h"
 #include <sstream>
-
+#include "ReaderFiguresWeight.h"
 ReaderBallOrPaeallepiped::ReaderBallOrPaeallepiped(std::string str)
 {
 	teamp = str;
@@ -14,55 +14,76 @@ ReaderBallOrPaeallepiped::ReaderBallOrPaeallepiped(std::string str)
 
 Figures* ReaderBallOrPaeallepiped::get()
 {
+	Figures* object;
 	try
 	{
 		checkFigur(teamp);
-		Figures* object;
-		std::string type;
-		std::string figure;
-		std::stringstream stream(teamp);
-		stream >> type;
-		if (type == "ball") {
-			object = new Ball(stream);
-			
-			return object;
-
-		}
-
-
-		if (type == "parallelepiped") {
-
-			object = new Parallelepiped(stream);
-			
-			return object;
-
-		}
-
+		object = createObj(teamp);
+		return object;
 	}
 	catch (const ErrorCode error)
 	{
 		if (error.code == 1) {
 
 			ReaderCube reder(teamp);
-			try
-			{
-				return reder.get();
 
-			}
-			catch (const ErrorCode error)
-			{
-				throw error;
+			return reder.get();
 
-			}
+
+
 
 
 		}
 		else {
-			throw error;
+
+
+			if (error.code == 2) {
+				object = createObj(teamp);
+
+
+
+				ReaderFiguresWeight a(error.str, object);
+				return a.get();
+
+
+
+
+			}
+			
+
+
+
 		}
 
 	}
 
-
-
 }
+
+
+
+
+Figures* ReaderBallOrPaeallepiped::createObj(std::string teamp) {
+	Figures* object;
+	std::string type;
+	std::string figure;
+	std::stringstream stream(teamp);
+	stream >> type;
+	if (type == "ball") {
+		object = new Ball(stream);
+		return object;
+
+
+
+	}
+
+
+	if (type == "parallelepiped") {
+
+		object = new Parallelepiped(stream);
+		return object;
+
+
+
+	}
+}
+

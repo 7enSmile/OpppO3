@@ -14,7 +14,7 @@ void Figures::getDataFigure() {
 
 
 	printf(" density:%.2f", density);
-	std::cout << " owner:" << name << std::endl;
+	std::cout << " owner:" << name;
 
 
 }

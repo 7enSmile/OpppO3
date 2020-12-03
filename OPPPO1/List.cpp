@@ -1,4 +1,4 @@
-#include "List.h"
+#/*include "List.h"
 
 List::~List() {
 	clear();
@@ -85,4 +85,4 @@ void List::sort() {
 
 		}
 	}
-}
+}*/

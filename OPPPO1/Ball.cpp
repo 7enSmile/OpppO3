@@ -24,7 +24,7 @@ Ball::Ball(std::stringstream& stream) {
 
 }
 void Ball::getData() {
-	std::cout << "figure:ball " << "radius:" << radius;
+	std::cout << std::endl<<"figure:ball " << "radius:" << radius;
 	Figures::getDataFigure();
 }
 std::string Ball::getClass() {

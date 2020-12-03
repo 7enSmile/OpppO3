@@ -1,5 +1,6 @@
 ball 10 15.1 Петр
 ball 12 13.1 Алексей
 ball 14 11.1 Петр
+cube 15 15.5 Петр 12
 parallelepiped [1,2,3] 15.5 Петр
 parallelepiped [1,4,2] 11.5 Алексей
