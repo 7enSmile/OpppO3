@@ -26,3 +26,8 @@ void Cube::getData(std::ostream& os) {
 std::string Cube::getClass() {
 	return "cube";
 }
+
+int Cube::getVolume()
+{
+	return 3 * rib;
+}

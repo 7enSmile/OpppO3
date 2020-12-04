@@ -1,2 +1,3 @@
-﻿  main.cpp
+﻿  FunctionReader.cpp
+D:\prodjects\OpppO3\OPPPO1\FunctionReader.cpp(64): warning C4715: FunctionReader::checkFunction: значение возвращается не при всех путях выполнения
   OPPPO1.vcxproj -> D:\prodjects\OpppO3\x64\Debug\OPPPO1.exe

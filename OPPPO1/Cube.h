@@ -6,11 +6,13 @@
 class Cube : public Figures
 {
 public:
-	int rib;
-	Cube(std::stringstream& stream);
-private:
-	~Cube();
 	
+	Cube(std::stringstream& stream);
 	void getData(std::ostream&);
 	std::string getClass();
+	int getVolume();
+private:
+	~Cube();
+	int rib;
+	
 };

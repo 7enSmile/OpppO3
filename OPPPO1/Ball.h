@@ -11,6 +11,7 @@ public:
 	Ball(std::stringstream& stream);
 	void getData(std::ostream&);
 	std::string getClass();
+	int getVolume();
 
 };
 

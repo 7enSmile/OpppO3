@@ -16,3 +16,8 @@ std::string FiguresWeight::getCalss()
 	return Decorator::getClass();
 }
 
+int FiguresWeight::getVolume()
+{
+	return Decorator::getVolume();
+}
+

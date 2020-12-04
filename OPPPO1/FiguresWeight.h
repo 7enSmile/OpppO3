@@ -9,6 +9,7 @@ public:
 	FiguresWeight(Figures* figure, int teamp);
 	void getData(std::ostream&);
 	std::string getCalss();
+	int getVolume();
 	
 };
 

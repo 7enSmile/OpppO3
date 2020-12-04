@@ -149,6 +149,7 @@
     <ClCompile Include="Decorator.cpp" />
     <ClCompile Include="Figures.cpp" />
     <ClCompile Include="FiguresWeight.cpp" />
+    <ClCompile Include="FunctionReader.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="ErrorCode.h" />
     <ClInclude Include="Figures.h" />
     <ClInclude Include="FiguresWeight.h" />
+    <ClInclude Include="FunctionReader.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Parallelepiped.h" />

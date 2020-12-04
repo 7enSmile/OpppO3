@@ -31,3 +31,8 @@ std::string Ball::getClass() {
 	return "ball";
 }
 
+int Ball::getVolume()
+{
+	return 4 / 3.0 * 3.14 * radius * radius;
+}
+

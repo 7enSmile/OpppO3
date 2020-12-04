@@ -56,6 +56,10 @@ void Parallelepiped::getData(std::ostream& os) {
 	os<< std::endl<< "figure:parallelepiped " << "r1:" << rib[0] << " r2:" << rib[1] << " r3:" << rib[2];
 	Figures::getDataFigure();
 }
+int Parallelepiped::getVolume()
+{
+	return rib[0] * rib[1] * rib[2];
+}
 std::string Parallelepiped::getClass() {
 	return "parallelepiped";
 }

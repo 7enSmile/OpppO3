@@ -5,6 +5,7 @@
 #include "ErrorCode.h"
 #include "ReaderBallOrPaeallepiped.h"
 #include "Ball.h"
+#include "FunctionReader.h"
 
 
 
@@ -23,17 +24,27 @@ int main(int argc, char** argv) {
 		try
 		{
 			Figures* obj = reader.get();
-			std::cout << obj->getClass();
+			list->push(obj);
+			
+			
 
 		}
 		catch (const ErrorCode)
 		{
+			FunctionReader a(str, list);
+			a.startFunction();
 
 		}
 
 
 	}
-
+	
+	
+	
+	
+	for (int i = 0; i < list->size(); i++) {
+		std::cout << (*list)[i]->figure[0];
+	}
 
 
 

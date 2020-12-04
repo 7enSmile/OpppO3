@@ -26,8 +26,9 @@ private:
 public:
 	~List();
 	void push(Figures* object);
-	void print();
-	void deleteFigure(std::string name);
-	void sort();
+	Node* operator [](const int index);
+	int size();
+	void deleteFigure(std::string& name);
+	
 };
 

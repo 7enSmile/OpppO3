@@ -9,6 +9,7 @@ public:
 	~Parallelepiped()override;
 	Parallelepiped(std::stringstream& stream);
 	void getData(std::ostream&);
+	int getVolume();
 	std::string getClass();
 };
 

@@ -16,3 +16,8 @@ std::string Decorator::getClass()
 {
     return figure->getClass();
 }
+
+int Decorator::getVolume()
+{
+    return figure->getVolume();
+}

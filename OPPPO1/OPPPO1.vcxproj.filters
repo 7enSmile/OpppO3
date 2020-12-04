@@ -59,6 +59,9 @@
     <ClCompile Include="CheckWeight.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionReader.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Figures.h">
@@ -110,6 +113,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="CheckWeight.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionReader.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
