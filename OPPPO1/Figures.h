@@ -14,7 +14,7 @@ public:
 	virtual int getVolume() = 0;
 	void setName(std::string& teampName);
 	void setDensity(float teampDensity);
-	void getDataFigure();
+	void getDataFigure(std::ostream& os);
 	std::string getName();
 };
 

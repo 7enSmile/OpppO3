@@ -1,5 +1,6 @@
 #include "Figures.h"
 #include "iostream"
+#include <iomanip>
 Figures::~Figures() {
 
 }
@@ -14,11 +15,12 @@ void Figures::setName(std::string& teampName) {
 void Figures::setDensity(float teampDensity) {
 	density = teampDensity;
 }
-void Figures::getDataFigure() {
+void Figures::getDataFigure(std::ostream& os) {
+	
 
 
-	printf(" density:%.2f", density);
-	std::cout << " owner:" << name;
+	os<<" densyty:"<< std::fixed<< std::setprecision(2)<<density;
+	os << " owner:" << name;
 
 
 }

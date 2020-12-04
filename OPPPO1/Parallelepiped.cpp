@@ -54,7 +54,7 @@ Parallelepiped::Parallelepiped(std::stringstream& stream) {
 }
 void Parallelepiped::getData(std::ostream& os) {
 	os<< std::endl<< "figure:parallelepiped " << "r1:" << rib[0] << " r2:" << rib[1] << " r3:" << rib[2];
-	Figures::getDataFigure();
+	Figures::getDataFigure(os);
 }
 int Parallelepiped::getVolume()
 {

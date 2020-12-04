@@ -21,7 +21,7 @@ Cube::Cube(std::stringstream& stream) {
 }
 void Cube::getData(std::ostream& os) {
 	os << std::endl<<"figure:cube " << "rib:" << rib;
-	Figures::getDataFigure();
+	Figures::getDataFigure(os);
 }
 std::string Cube::getClass() {
 	return "cube";
