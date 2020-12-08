@@ -45,11 +45,18 @@ int main(int argc, char** argv) {
 	for (int i = 0; i < list->size(); i++) {
 		std::cout << (*list)[i]->figure[0];
 	}
+	std::cout << std::endl<<list->size();
+	
+	
 
 
 
 
-	return 1;
+	delete list;
+
+
+
+	return 0;
 
 
 }

@@ -2,7 +2,7 @@
 #include "Figures.h"
 #include "sstream"
 #include "iostream"
-#include "readOwner.h"
+
 class Cube : public Figures
 {
 public:

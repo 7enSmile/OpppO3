@@ -28,7 +28,7 @@ public:
 	void push(Figures* object);
 	Node* operator [](const int index);
 	int size();
-	void deleteFigure(std::string& name);
+	void deleteFigure(const std::string& name);
 	
 };
 

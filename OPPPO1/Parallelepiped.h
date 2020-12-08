@@ -7,7 +7,7 @@ private:
 	int* rib = new int[3];
 public:
 	~Parallelepiped()override;
-	Parallelepiped(std::stringstream& stream);
+	Parallelepiped(int,int,int,float,std::string&);
 	void getData(std::ostream&);
 	int getVolume();
 	std::string getClass();

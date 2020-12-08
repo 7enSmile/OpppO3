@@ -33,7 +33,7 @@ int List::size()
 }
 
 
-void List::deleteFigure(std::string& name) {
+void List::deleteFigure(const std::string& name) {
 	Node* k = top;
 	Node* l = top;
 	Node* teamp;
