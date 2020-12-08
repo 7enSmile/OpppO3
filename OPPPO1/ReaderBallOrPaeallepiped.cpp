@@ -68,25 +68,47 @@ bool ReaderBallOrPaeallepiped::isOwner(const std::string name) {
 	if (std::regex_match(name.c_str(), result, regularOwner)|| std::regex_match(name.c_str(), result, regularOwnerSplit))
 		return true;
 	else
+	{
+		std::cmatch result;
+		std::regex regularOwner("([À-ß]|[A-Z])[\\S]+[\\s]+(.*)");
+		std::regex regularOwnerSplit("\"([À-ß]|[A-Z])[\\S]+ (.*)\"[\\s]+(.*)");
+		if (std::regex_match(name.c_str(), result, regularOwner) || std::regex_match(name.c_str(), result, regularOwnerSplit)) {
+			ErrorCode error;
+			error.code = 2;
+			error.str = result[3].str();
+			error.about = "ToMatchArg";
+			throw error;
+		}
 		return false;
+
+	}
 
 }
 
 Figures* ReaderBallOrPaeallepiped::ObjBall(const std::string& radiusTeamp, const std::string& densityTeamp , const std::string& ownerTeamp) {
-	if (isOwner(ownerTeamp)) {
-		int radius = stringToInt(radiusTeamp);
-		float density = stringToFloat(densityTeamp);
-		std::string owner = ownerTeamp;
-		Figures* figure = new Ball(radius, density, owner);
-		return figure;
+	try
+	{
+		if (isOwner(ownerTeamp)) {
+			int radius = stringToInt(radiusTeamp);
+			float density = stringToFloat(densityTeamp);
+			std::string owner = ownerTeamp;
+			Figures* figure = new Ball(radius, density, owner);
+			return figure;
+
+		}
+		else
+		{
+			ErrorCode error;
+			error.code = 0;
+			error.about = "Critical";
+		}
 
 	}
-	else
+	catch (const ErrorCode error)
 	{
-		ErrorCode error;
-		error.code = 2;
-		error.about = "ToMatchArg";
+
 	}
+	
 
 }
 Figures* ReaderBallOrPaeallepiped::ObjParalelepiped(const std::string& r1, const std::string& r2, const std::string& r3, const std::string& densityTeamp, const std::string& ownerTeamp) {
@@ -103,8 +125,8 @@ Figures* ReaderBallOrPaeallepiped::ObjParalelepiped(const std::string& r1, const
 	else
 	{
 		ErrorCode error;
-		error.code = 2;
-		error.about = "ToMatchArg";
+		error.code = 0;
+		error.about = "Critical";
 	}
 
 
