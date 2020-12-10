@@ -47,6 +47,9 @@
     <ClCompile Include="ReaderCube.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="ReadOwner.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Figures.h">
@@ -82,13 +85,13 @@
     <ClInclude Include="FiguresWeight.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ReaderFiguresWeight.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="CheckWeight.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="FunctionReader.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadOwner.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

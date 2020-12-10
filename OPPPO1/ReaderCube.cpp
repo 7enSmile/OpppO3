@@ -4,6 +4,8 @@
 #include <string>
 #include "ErrorCode.h"
 #include "Cube.h"
+#include "ReadOwner.h"
+#include "FiguresWeight.h"
 
 ReaderCube::ReaderCube(std::string str)
 {
@@ -17,19 +19,9 @@ Figures* ReaderCube::get()
 	std::cmatch result;
 	std::regex regularCube("cube[\\s]+([+-]?[\\d]+)[\\s]+([+-]?[\\d]+\.[\\d])[\\s]+(.*)");
 	if (std::regex_match(teamp.c_str(), result, regularCube)) {
-		try
-		{
-			Figures* figures = ObjCube(result[1].str(), result[2].str(), result[3].str());
-			return figures;
 
-		}
-		catch (const ErrorCode error)
-		{
-			//ловим ошибки от создателя
-			throw error;
-
-		}
-
+		Figures* figures = ObjCube(result[1].str(), result[2].str(), result[3].str());
+		return figures;
 
 	}
 	ErrorCode error;
@@ -40,13 +32,29 @@ Figures* ReaderCube::get()
 
 Figures* ReaderCube::ObjCube(const std::string& ribTeamp, const std::string& densityTeamp, const std::string& ownerTeamp)
 {
+	try {
+		isOwner(ownerTeamp);
+		int radius = stringToInt(ribTeamp);
+		float density = stringToFloat(densityTeamp);
+		std::string owner = ownerTeamp;
+		Figures* figure = new Cube(radius, density, owner);
+		return figure;
+	}
+	catch (const ErrorCode error) {
+		if (error.code == 0) {
+			throw error;
+		}
+		if (error.code == 2) {
+			int radius = stringToInt(ribTeamp);
+			float density = stringToFloat(densityTeamp);
+			std::stringstream ss(ownerTeamp);
+			std::string owner = readOwner(ss);
+			int weight = stringToInt(error.str);
+			Figures* figure = new FiguresWeight(new Cube(radius, density, owner), weight);
+			return figure;
+		}
 
-	isOwner(ownerTeamp);
-	int radius = stringToInt(ribTeamp);
-	float density = stringToFloat(densityTeamp);
-	std::string owner = ownerTeamp;
-	Figures* figure = new Cube(radius, density, owner);
-	return figure;
+	}
 
 
 

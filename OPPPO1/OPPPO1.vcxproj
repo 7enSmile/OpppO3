@@ -153,6 +153,7 @@
     <ClCompile Include="Parallelepiped.cpp" />
     <ClCompile Include="ReaderBallOrPaeallepiped.cpp" />
     <ClCompile Include="ReaderCube.cpp" />
+    <ClCompile Include="ReadOwner.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
@@ -168,7 +169,7 @@
     <ClInclude Include="Parallelepiped.h" />
     <ClInclude Include="ReaderBallOrPaeallepiped.h" />
     <ClInclude Include="ReaderCube.h" />
-    <ClInclude Include="ReaderFiguresWeight.h" />
+    <ClInclude Include="ReadOwner.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="OPPPO11.rc" />
