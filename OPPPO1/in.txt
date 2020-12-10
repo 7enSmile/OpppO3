@@ -1,1 +1,7 @@
 parallelepiped [-1,2,3] 10.5 Алексей 12
+ball 10 15.1 Леха
+parallelepiped [-1,2,3] 10.5 Алексей 12
+ball 10 15.1 Леха
+parallelepiped [-1,2,3] 10.5 Алексей 12
+ball 10 15.1 Леха
+function sort name

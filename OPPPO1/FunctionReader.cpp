@@ -2,6 +2,8 @@
 #include <cmath>
 #include <regex>
 #include <sstream>
+#include <functional>
+#include "Node.h"
 
 FunctionReader::FunctionReader(std::string strTeamp, List* listTeamp)
 {
@@ -17,21 +19,19 @@ void FunctionReader::startFunction()
 void FunctionReader::sort(std::string params)
 {
 	if (params == "name") {
-		for (int i = 0; i < list->size(); i++) {
-			for (int j = 0; j < list->size(); j++) {
-				if ((*list)[i]->figure[0]->getName() < (*list)[j]->figure[0]->getName()) {
-					std::swap((*list)[i]->figure[0], (*list)[j]->figure[0]);
-
-				}
-
-			}
-		}
+		list->sort([](Node node1, Node node2) {return node1.figure[0]->getName() < node2.figure[0]->getName(); });
 	}
 }
 
+
 void FunctionReader::deleteFigure(std::string params)
 {
-	list->deleteFigure(params);
+	if(params=="ball")
+	list->deleteFigure([](Node node) {return node.figure[0]->getClass() == "ball"; });
+	if (params == "cube")
+	list->deleteFigure([](Node node) {return node.figure[0]->getClass() == "cube"; });
+	if (params == "parallelepiped")
+	list->deleteFigure([](Node node) {return node.figure[0]->getClass() == "parallelepiped"; });
 }
 
 bool FunctionReader::checkFunction()

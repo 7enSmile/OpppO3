@@ -1,5 +1,5 @@
 #include "List.h"
-
+#include <functional>
 List::~List() {
 	clear();
 }
@@ -33,7 +33,7 @@ int List::size()
 }
 
 
-void List::deleteFigure(const std::string& name) {
+void List::deleteFigure(std::function<bool(Node)> pred) {
 	Node* k = top;
 	Node* l = top;
 	Node* teamp;
@@ -41,7 +41,7 @@ void List::deleteFigure(const std::string& name) {
 	int teampSize = sizeList;
 	for (int i = 0; i < sizeList; i++) {
 
-		if (k->figure[0]->getClass() == name) {
+		if (pred(*k)) {
 
 			if (k == top) {
 				teamp = k->link;
@@ -71,6 +71,19 @@ void List::deleteFigure(const std::string& name) {
 
 	}
 	sizeList = teampSize;
+}
+void List::sort(std::function<bool(Node, Node)> pred) {
+	Node* k = top;
+	Node* l = top;
+	for (int i = 0; i < sizeList; i++, k = k->link) {
+		for (int j = 0; j < sizeList; j++, l = l->link) {
+			if (pred(*k, *l)) {
+				std::swap(k->figure[0], l->figure[0]);
+			}
+
+
+		}
+	}
 }
 
 

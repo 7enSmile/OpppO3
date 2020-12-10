@@ -2,6 +2,7 @@
 #include "string"
 #include "Figures.h"
 #include "Node.h"
+#include <functional>
 class List
 {
 private:
@@ -28,7 +29,8 @@ public:
 	void push(Figures* object);
 	Node* operator [](const int index);
 	int size();
-	void deleteFigure(const std::string& name);
+	void deleteFigure(std::function<bool(Node)> pred);
+	void sort(std::function<bool(Node, Node)> pred);
 	
 };
 
