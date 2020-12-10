@@ -3,8 +3,10 @@
 Cube::~Cube() {
 
 }
-Cube::Cube(std::stringstream& stream) {
-	
+Cube::Cube(int ribTeamp,float density,std::string owner) {
+	rib = ribTeamp;
+	Figures::setDensity(density);
+	Figures::setName(owner);
 }
 void Cube::getData(std::ostream& os) {
 	os << std::endl<<"figure:cube " << "rib:" << rib;

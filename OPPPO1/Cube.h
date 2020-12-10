@@ -7,7 +7,7 @@ class Cube : public Figures
 {
 public:
 	
-	Cube(std::stringstream& stream);
+	Cube(int,float,std::string);
 	void getData(std::ostream&);
 	std::string getClass();
 	int getVolume();

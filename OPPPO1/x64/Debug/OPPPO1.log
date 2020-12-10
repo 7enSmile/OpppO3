@@ -1,5 +1,3 @@
 ﻿  ReaderBallOrPaeallepiped.cpp
-E:\OpppO3\OPPPO1\ReaderBallOrPaeallepiped.cpp(46,11): warning C4101: object: неиспользованная локальная переменная
-E:\OpppO3\OPPPO1\ReaderBallOrPaeallepiped.cpp(113): warning C4715: ReaderBallOrPaeallepiped::ObjBall: значение возвращается не при всех путях выполнения
-E:\OpppO3\OPPPO1\ReaderBallOrPaeallepiped.cpp(133): warning C4715: ReaderBallOrPaeallepiped::ObjParalelepiped: значение возвращается не при всех путях выполнения
+E:\OpppO3\OPPPO1\ReaderBallOrPaeallepiped.cpp(49,11): warning C4101: object: неиспользованная локальная переменная
   OPPPO1.vcxproj -> E:\OpppO3\x64\Debug\OPPPO1.exe

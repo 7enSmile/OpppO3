@@ -152,6 +152,7 @@
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Parallelepiped.cpp" />
     <ClCompile Include="ReaderBallOrPaeallepiped.cpp" />
+    <ClCompile Include="ReaderCube.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ball.h" />
